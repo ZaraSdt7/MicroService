@@ -22,6 +22,7 @@
     "npm:mysql2@3.5.2": "3.5.2",
     "npm:path-to-regexp@6.2.1": "6.2.1",
     "npm:sequelize-cli@*": "6.6.2",
+    "npm:sequelize-typescript@*": "2.1.6_@types+node@22.5.4_@types+validator@13.12.2_reflect-metadata@0.2.2_sequelize@6.32.1",
     "npm:sequelize-typescript@2.1.6": "2.1.6_@types+node@22.5.4_@types+validator@13.12.2_reflect-metadata@0.2.2_sequelize@6.32.1",
     "npm:sequelize@*": "6.32.1",
     "npm:sequelize@6.32.1": "6.32.1",

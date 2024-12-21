@@ -1,6 +1,8 @@
 import "npm:mysql2@3.5.2"
 import { Sequelize } from "npm:sequelize-typescript@2.1.6"
 import { env } from "node:process";
+import { User } from "./model/user.model.ts";
+import { Items } from "./model/items.model.ts";
 
 
   export const sequelize = new Sequelize({
@@ -15,7 +17,7 @@ import { env } from "node:process";
         alter: true,
     },
 
-    models: [
+    models: [ User , Items 
     
     ],
     
