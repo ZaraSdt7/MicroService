@@ -1,4 +1,5 @@
 import { AutoIncrement, Column, CreatedAt, DataType, Model, PrimaryKey, Table, UpdatedAt } from "npm:sequelize-typescript"
+import { Iuser } from "./enum/user.enum.ts";
 
 @Table({
     timestamps: true,
@@ -34,9 +35,22 @@ export class User extends Model<User> {
     @Column({
         type: DataType.STRING,
         allowNull: false,
-        defaultValue: "customer", //admin, customer,
+        defaultValue: Iuser.customer, //admin, customer,
+       
     })
     role!:string
+
+    @Column({
+        type: DataType.STRING,
+        allowNull: true,
+    })
+    otp!: string
+
+    @Column({
+        type: DataType.DATE,
+        allowNull: true,
+    })
+    otp_expirsation!: Date
 
     @Column({
         type: DataType.DATE,
