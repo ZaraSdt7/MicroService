@@ -17,7 +17,6 @@ import { Buffer } from "node:buffer";
       this.otpController = new OtpController();
     }
   
-    // ارسال OTP
     async sendOtp(req: Request, res: Response) {
       const { mobile } = req.body;
   
@@ -40,7 +39,6 @@ import { Buffer } from "node:buffer";
       }
     }
   
-    // تایید OTP
     async verifyOtp(req: Request, res: Response) {
       const { mobile, otpCode } = req.body;
   
