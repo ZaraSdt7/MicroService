@@ -40,9 +40,9 @@ import { Buffer } from "node:buffer";
     }
   
     async verifyOtp(req: Request, res: Response) {
-      const { mobile, otpCode } = req.body;
+      const { mobile, otp } = req.body;
   
-      if (!mobile || !otpCode) {
+      if (!mobile || !otp) {
         return res.status(400).json({
           message: "Please provide mobile number and OTP code",
         });
@@ -68,7 +68,7 @@ import { Buffer } from "node:buffer";
           });
         } else {
           return res.status(200).json({
-            message: "Please provide a nickname to complete registration",
+            message: "Please provide a name to complete registration",
             requiresNickname: true,
           });
         }
@@ -85,7 +85,7 @@ import { Buffer } from "node:buffer";
   
       if (!name) {
         return res.status(400).json({
-          message: "Please provide a nickname to complete registration",
+          message: "Please provide a name to complete registration",
         });
       }
   
@@ -105,7 +105,7 @@ import { Buffer } from "node:buffer";
         });
       } catch (error) {
         return res.status(500).json({
-          message: "Failed to register account",
+          message: "Failed to register user",
           error: (error as Error).message,
         });
       }

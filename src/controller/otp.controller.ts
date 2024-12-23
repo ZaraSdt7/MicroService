@@ -15,7 +15,6 @@ export class OtpController {
         );
       }
     
-      // تایید OTP
       async verifyOtpCode(req: Request, _res: Response): Promise<boolean> {
         const { mobile, otpCode } = req.body;
     
