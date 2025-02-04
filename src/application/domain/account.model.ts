@@ -1,9 +1,7 @@
-export class Account {
-  constructor(
-    public id: number,
-    public name: string,
-    public email: string,
-    public mobile: string,
-    public createAt: Date,
-  ) {}
+export interface Account {
+  id?: number;
+  name: string;
+  email: string;
+  mobile: string;
+  createAt?: Date;
 }
